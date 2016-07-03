@@ -1,26 +1,26 @@
-Some things to keep in mind here:
+# README
+This game is based on the lets talk data adventure tutorial found [here](https://github.com/phillipjohnson/text-adventure-tut) with some minor tweaks (_note: I originally found the code from the blog posts and thus have a bootleg copy of these files rather than a copy of the real repo_). I worked on this to build more familiarity with python, hopefully a somewhat interesting game is a byproduct. **Requires Python 3**
 
-- Basic Map modified for DTF
-- Adding an "interactive" scene for each room?
+## Running the Game
+Download the death_to_fairyland directory. From inside that directory run the following command at the command line (e.g. Git Bash for Windows or Terminal for OS X).
 
-Things that could be improved:
-## Misc
-- Giving the player provides no benefit
+    python game.py
 
-## Tiles
-- add "scenes" to Rooms something like.
->    for i in string.split('\n'):
-        print(i,'\n')
-        pause(2)
+## Things that could be improved:
+Since this is more or less an exercise in object oriented programing and not game design there are a bunch of things that could be improved in the game... some of which are listed below:
 
 
-## Items
-- pick up items over and over again when entering rooms
-    - perhaps a unique attribute?
-    - perhaps a in inventory attribute check
+#### Puzzles
+It would be cool to add some puzzles and choices to the game, especially since the combat system is very simple
 
-## Fighting System
-- The fighting system doesn't allow us to change weapons
-    - So there is basically no point in "selecting a weapon"
-    - It isn't clear how we could select a weapon, either when we pick it up or from inventory
-- Weapons have no speed, that would be a cool differentiator    
+#### Items
+Item value is basically useless since there is no in game economy (buying, selling, trading)
+
+#### Combat System
+Combat is very simple, the best weapon is selected for the player and is based on damage only.  
+
+#### Map
+As currently implemented the map is fairly cryptic, a NSEW description might be a helpful way to make navigation more useful. Perhaps a "look around" command that describes a MapTile.
+
+#### File Storage
+YAML files might be a great way to save and store all the text in this text based adventure.
